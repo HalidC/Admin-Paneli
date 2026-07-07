@@ -1,0 +1,55 @@
+import { BlogPost } from '../../types/blog';
+
+export const mockBlogPosts: BlogPost[] = [
+  {
+    id: 'post-1',
+    title: 'SaaS Altyapısında Linear Estetiği Neden Önemli?',
+    slug: 'saas-altyapisinda-linear-estetigi',
+    summary: 'Kullanıcıların modern arayüz beklentilerini ve Apple/Linear tarzı minimalizmin dönüşüm oranlarına etkisini inceliyoruz.',
+    content: 'Tasarım, bir yazılımın sadece nasıl göründüğü değil, nasıl çalıştığıdır. Linear.app ve Apple’ın öncülük ettiği yeni dalga minimalizm, arayüz gürültüsünü en aza indirerek doğrudan işlevselliğe odaklanır...',
+    coverImage: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80',
+    author: {
+      name: 'Kaan Aksoy',
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80',
+    },
+    tags: ['Tasarım', 'SaaS', 'UX'],
+    readTime: '4 dk okuma',
+    publishedAt: '2026-07-07T09:00:00Z',
+    status: 'published',
+    viewCount: 1420,
+  },
+  {
+    id: 'post-2',
+    title: 'Düşük Gecikmeli API Sunucuları Kurma Rehberi',
+    slug: 'dusuk-gecikmeli-api-sunuculari',
+    summary: 'Global ölçekte 50ms altında çalışan Node.js ve Go tabanlı API mimarileri tasarlarken dikkat edilmesi gerekenler.',
+    content: 'Modern web uygulamalarında hız, her şeydir. Veritabanı sorgularının optimize edilmesi, doğru önbellekleme mekanizmaları ve CDN ağ geçitleri...',
+    coverImage: 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=800&auto=format&fit=crop&q=80',
+    author: {
+      name: 'Mert Yılmaz',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80',
+    },
+    tags: ['Geliştirme', 'DevOps', 'Performans'],
+    readTime: '7 dk okuma',
+    publishedAt: '2026-07-05T10:30:00Z',
+    status: 'published',
+    viewCount: 980,
+  },
+  {
+    id: 'post-3',
+    title: 'Bortesoft v2 ile Gelen Yenilikler',
+    slug: 'bortesoft-v2-yenilikleri',
+    summary: 'Tamamen yenilenen Bento Grid oluşturucu, dinamik form şemaları ve yeni SEO paneli yayında.',
+    content: 'Bortesoft platformunun yeni sürümü, tamamen kullanıcı geri bildirimleriyle şekillendirildi...',
+    coverImage: 'https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&auto=format&fit=crop&q=80',
+    author: {
+      name: 'Zeynep Kaya',
+      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80',
+    },
+    tags: ['Duyurular', 'Bortesoft', 'Güncelleme'],
+    readTime: '3 dk okuma',
+    publishedAt: undefined,
+    status: 'draft',
+    viewCount: 0,
+  },
+];
