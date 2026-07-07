@@ -4,6 +4,6 @@ export interface FAQItem {
   answer: string;
   category: string;
   order: number;
-  status: 'active' | 'draft';
+  status: 'active' | 'draft' | 'archived' | 'inactive';
   lastModified: string;
 }

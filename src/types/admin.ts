@@ -7,14 +7,14 @@ export interface AdminUser {
 }
 
 export interface DashboardStats {
-  monthlyRecurringRevenue: number;
-  mrrGrowth: number;
-  activeCustomers: number;
-  customerGrowth: number;
-  demoRequestsCount: number;
-  demoGrowth: number;
-  conversionRate: number;
-  conversionGrowth: number;
+  totalDemoCount: number;
+  newDemoCount: number;
+  activeLandingSectionCount: number;
+  draftContentCount: number;
+  activeBlogPostCount: number;
+  recentFormSubmissions7Days: number;
+  lastPublishDate: string;
+  systemStatus: 'optimal' | 'warning' | 'critical';
 }
 
 export interface ActivityLog {

@@ -8,7 +8,7 @@ import { Badge } from '../../../components/ui/badge';
 import { Modal } from '../../../components/ui/modal';
 import { Input, Textarea, Select } from '../../../components/ui/input';
 import { STATUS_OPTIONS } from '../../../config/status-options';
-import { Plus, Edit2, Trash2, HelpCircle, RefreshCw } from 'lucide-react';
+import { Plus, Edit2, HelpCircle, RefreshCw } from 'lucide-react';
 
 export default function FAQPage() {
   const [faqs, setFaqs] = useState<FAQItem[]>([]);
@@ -68,11 +68,9 @@ export default function FAQPage() {
     setIsModalOpen(false);
   };
 
-  const handleDelete = async (id: string) => {
-    if (confirm('Bu sıkça sorulan soruyu silmek istediğinize emin misiniz?')) {
-      await faqService.delete(id);
-      setFaqs(faqs.filter((f) => f.id !== id));
-    }
+  const handleStatusUpdate = async (id: string, newStatus: FAQItem['status']) => {
+    const updated = await faqService.update(id, { status: newStatus });
+    setFaqs(faqs.map((f) => (f.id === id ? updated : f)));
   };
 
   const getStatusBadge = (s: FAQItem['status']) => {
@@ -138,13 +136,25 @@ export default function FAQPage() {
               </TableCell>
               <TableCell>{getStatusBadge(faq.status)}</TableCell>
               <TableCell className="text-right">
-                <div className="flex items-center justify-end gap-2">
-                  <Button variant="ghost" size="xs" onClick={() => handleOpenEdit(faq)} className="p-1 h-8 w-8">
+                <div className="flex items-center justify-end gap-1.5">
+                  <Button variant="ghost" size="xs" onClick={() => handleOpenEdit(faq)} className="p-1 h-7 w-7" title="Düzenle">
                     <Edit2 className="h-3.5 w-3.5 text-slate-500" />
                   </Button>
-                  <Button variant="ghost" size="xs" onClick={() => handleDelete(faq.id)} className="p-1 h-8 w-8 hover:bg-red-50 hover:text-red-600">
-                    <Trash2 className="h-3.5 w-3.5 text-red-500" />
-                  </Button>
+                  {faq.status !== 'archived' && (
+                    <Button variant="ghost" size="xs" onClick={() => handleStatusUpdate(faq.id, 'archived')} className="px-2 h-7 text-[11px] font-semibold text-slate-500 hover:bg-slate-100 hover:text-slate-800">
+                      Arşivle
+                    </Button>
+                  )}
+                  {faq.status !== 'inactive' && (
+                    <Button variant="ghost" size="xs" onClick={() => handleStatusUpdate(faq.id, 'inactive')} className="px-2 h-7 text-[11px] font-semibold text-rose-500 hover:bg-rose-50 hover:text-rose-700">
+                      Pasifleştir
+                    </Button>
+                  )}
+                  {faq.status !== 'draft' && (
+                    <Button variant="ghost" size="xs" onClick={() => handleStatusUpdate(faq.id, 'draft')} className="px-2 h-7 text-[11px] font-semibold text-amber-600 hover:bg-amber-50 hover:text-amber-700">
+                      Taslak
+                    </Button>
+                  )}
                 </div>
               </TableCell>
             </TableRow>
@@ -208,6 +218,8 @@ export default function FAQPage() {
               options={[
                 { value: 'active', label: 'Yayınla (Active)' },
                 { value: 'draft', label: 'Taslak (Draft)' },
+                { value: 'archived', label: 'Arşive Kaldır (Archived)' },
+                { value: 'inactive', label: 'Pasifleştir (Inactive)' },
               ]}
             />
           </div>

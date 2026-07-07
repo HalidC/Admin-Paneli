@@ -12,6 +12,6 @@ export interface BlogPost {
   tags: string[];
   readTime: string;
   publishedAt?: string;
-  status: 'draft' | 'published' | 'scheduled';
+  status: 'draft' | 'published' | 'scheduled' | 'archived' | 'inactive';
   viewCount: number;
 }

@@ -3,15 +3,20 @@ export const STATUS_OPTIONS = {
     { value: 'published', label: 'Yayınlandı', color: 'success' },
     { value: 'draft', label: 'Taslak', color: 'warning' },
     { value: 'archived', label: 'Arşivlendi', color: 'neutral' },
+    { value: 'inactive', label: 'Pasif', color: 'danger' },
   ],
   blogPost: [
     { value: 'published', label: 'Yayında', color: 'success' },
     { value: 'draft', label: 'Taslak', color: 'warning' },
+    { value: 'archived', label: 'Arşivlendi', color: 'neutral' },
+    { value: 'inactive', label: 'Pasif', color: 'danger' },
     { value: 'scheduled', label: 'Planlandı', color: 'info' },
   ],
   faqItem: [
     { value: 'active', label: 'Yayında', color: 'success' },
     { value: 'draft', label: 'Taslak', color: 'warning' },
+    { value: 'archived', label: 'Arşivlendi', color: 'neutral' },
+    { value: 'inactive', label: 'Pasif', color: 'danger' },
   ],
   formSubmission: [
     { value: 'new', label: 'Yeni', color: 'danger' },

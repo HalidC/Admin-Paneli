@@ -1,14 +1,14 @@
 import { DashboardStats, ActivityLog, PerformanceMetric } from '../../types/admin';
 
 export const mockDashboardStats: DashboardStats = {
-  monthlyRecurringRevenue: 142500,
-  mrrGrowth: 14.8,
-  activeCustomers: 1240,
-  customerGrowth: 12.2,
-  demoRequestsCount: 88,
-  demoGrowth: 28.5,
-  conversionRate: 3.42,
-  conversionGrowth: 4.1,
+  totalDemoCount: 142,
+  newDemoCount: 18,
+  activeLandingSectionCount: 7,
+  draftContentCount: 5,
+  activeBlogPostCount: 12,
+  recentFormSubmissions7Days: 34,
+  lastPublishDate: '07.07.2026 10:45',
+  systemStatus: 'optimal',
 };
 
 export const mockActivityLogs: ActivityLog[] = [

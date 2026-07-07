@@ -2,7 +2,7 @@ export interface WebPage {
   id: string;
   title: string;
   slug: string;
-  status: 'published' | 'draft' | 'archived';
+  status: 'published' | 'draft' | 'archived' | 'inactive';
   lastModified: string;
   author: string;
   layout: 'default' | 'landing' | 'minimal' | 'blog';

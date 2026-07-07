@@ -1,11 +1,15 @@
 export interface LandingSection {
   id: string;
-  name: string; // e.g. "Hero", "Features Bento", "Global Capabilities", "Testimonials"
-  type: 'hero' | 'bento' | 'features' | 'cta' | 'pricing';
+  key: string;
+  name: string;
+  anchor: string;
+  order: number;
   title: string;
   subtitle?: string;
+  description?: string;
   isActive: boolean;
-  order: number;
-  content: Record<string, any>; // Dynamic structure for sections
-  lastUpdated: string;
+  publishStatus: 'draft' | 'published' | 'archived';
+  updatedAt: string;
+  ctaText?: string;
+  ctaLink?: string;
 }

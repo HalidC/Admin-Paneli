@@ -18,7 +18,7 @@ export const webSectionsService = {
       const updated = {
         ...stateLandingSections[index],
         ...updates,
-        lastUpdated: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
       };
       stateLandingSections[index] = updated;
       setTimeout(() => resolve(updated), 200);

@@ -9,4 +9,12 @@ export interface SEOMetadata {
   sitemapPriority: number; // e.g. 0.8
   lastCrawled?: string;
   score: number; // On-page SEO quality score out of 100
+  
+  // Expanded fields
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterImage?: string;
+  isIndexed: boolean; // Index / Noindex
+  includeInSitemap: boolean; // Sitemap'e dahil et
+  updatedAt?: string; // Son güncelleme tarihi
 }
