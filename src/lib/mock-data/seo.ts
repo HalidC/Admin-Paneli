@@ -1,0 +1,40 @@
+import { SEOMetadata } from '../../types/seo';
+
+export const mockSEOMetadataList: SEOMetadata[] = [
+  {
+    id: 'seo-1',
+    pagePath: '/',
+    title: 'Bortesoft - Ultra-Premium SaaS Arayüzleri',
+    description: 'Bortesoft ile projenizi Linear ve Apple kalitesinde tasarlayın. En hızlı bento grid oluşturucu ve modern API altyapısı.',
+    keywords: ['SaaS', 'Tasarım', 'Bento Grid', 'Linear Estetiği', 'Apple Stil'],
+    ogImage: 'https://bortesoft.com/og-main.png',
+    canonicalUrl: 'https://bortesoft.com',
+    sitemapPriority: 1.0,
+    lastCrawled: '2026-07-06T04:12:00Z',
+    score: 98,
+  },
+  {
+    id: 'seo-2',
+    pagePath: '/pricing',
+    title: 'Esnek Planlar & Adil Fiyatlandırma - Bortesoft',
+    description: 'Her ölçekten ekip için esnek, şeffaf ve adil paketler. 14 gün ücretsiz deneyin, dilediğiniz an iptal edin.',
+    keywords: ['Bortesoft fiyatlandırma', 'SaaS paketleri', 'Aylık abonelik'],
+    ogImage: 'https://bortesoft.com/og-pricing.png',
+    canonicalUrl: 'https://bortesoft.com/pricing',
+    sitemapPriority: 0.8,
+    lastCrawled: '2026-07-05T03:45:00Z',
+    score: 94,
+  },
+  {
+    id: 'seo-3',
+    pagePath: '/blog',
+    title: 'Tasarım & Geliştirme Günlüğü - Bortesoft Blog',
+    description: 'SaaS geliştirme süreçleri, modern UX akımları ve performans iyileştirmeleri hakkında uzmanından makaleler.',
+    keywords: ['SaaS blog', 'Yazılım tasarım rehberleri', 'Frontend trendleri'],
+    ogImage: 'https://bortesoft.com/og-blog.png',
+    canonicalUrl: 'https://bortesoft.com/blog',
+    sitemapPriority: 0.7,
+    lastCrawled: '2026-07-04T12:00:00Z',
+    score: 88,
+  },
+];

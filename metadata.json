@@ -1,0 +1,6 @@
+{
+  "name": "Bortesoft Admin Panel",
+  "description": "Ultra-premium Apple & Linear.app inspired administration workspace for Bortesoft SaaS.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
