@@ -1,7 +1,28 @@
 import React, { useState } from 'react';
 import { MAIN_NAVIGATION, NavigationItem } from '../../config/navigation';
 import { cn } from '../../lib/utils';
-import { LayoutDashboard, Globe, Users, LayoutGrid, FileText, BookOpen, HelpCircle, Compass, Search, Image, ListTodo, ChevronDown, ChevronRight, Zap } from 'lucide-react';
+import { 
+  LayoutDashboard, 
+  Globe, 
+  Users, 
+  LayoutGrid, 
+  FileText, 
+  BookOpen, 
+  HelpCircle, 
+  Compass, 
+  Search, 
+  Image, 
+  ListTodo, 
+  ChevronDown, 
+  ChevronRight, 
+  Zap, 
+  Cpu,
+  Building2,
+  ShieldCheck,
+  Package,
+  Settings,
+  Terminal
+} from 'lucide-react';
 
 // Dynamic icon lookup map to maintain standard imports
 const ICON_MAP: Record<string, React.ComponentType<any>> = {
@@ -16,6 +37,12 @@ const ICON_MAP: Record<string, React.ComponentType<any>> = {
   Search,
   Image,
   ListTodo,
+  Cpu,
+  Building2,
+  ShieldCheck,
+  Package,
+  Settings,
+  Terminal,
 };
 
 interface AdminSidebarProps {

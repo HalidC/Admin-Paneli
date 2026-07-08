@@ -10,7 +10,7 @@ export interface NavigationItem {
 
 export const MAIN_NAVIGATION: NavigationItem[] = [
   {
-    label: 'Genel Bakış',
+    label: 'Genel Dashboard',
     path: ROUTES.DASHBOARD,
     iconName: 'LayoutDashboard',
   },
@@ -20,7 +20,12 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
     iconName: 'Globe',
     children: [
       {
-        label: 'Arayüz Bölümleri',
+        label: 'Web Dashboard',
+        path: ROUTES.WEB_MAIN,
+        iconName: 'LayoutDashboard',
+      },
+      {
+        label: 'Landing Bölümleri',
         path: ROUTES.WEB_LANDING_SECTIONS,
         iconName: 'LayoutGrid',
       },
@@ -30,17 +35,17 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
         iconName: 'FileText',
       },
       {
-        label: 'Blog Yazıları',
+        label: 'Blog',
         path: ROUTES.WEB_BLOG,
         iconName: 'BookOpen',
       },
       {
-        label: 'Sıkça Sorulanlar',
+        label: 'SSS',
         path: ROUTES.WEB_FAQ,
         iconName: 'HelpCircle',
       },
       {
-        label: 'Menü & Navigasyon',
+        label: 'Menü & Footer',
         path: ROUTES.WEB_NAVIGATION,
         iconName: 'Compass',
       },
@@ -58,6 +63,53 @@ export const MAIN_NAVIGATION: NavigationItem[] = [
         label: 'Form Yönetimi',
         path: ROUTES.WEB_FORMS,
         iconName: 'ListTodo',
+      },
+      {
+        label: 'Web Log Kayıtları',
+        path: ROUTES.WEB_LOGS,
+        iconName: 'Terminal',
+      },
+    ],
+  },
+  {
+    label: 'Platform Yönetimi',
+    path: ROUTES.PLATFORM_MAIN,
+    iconName: 'Cpu',
+    children: [
+      {
+        label: 'Platform Dashboard',
+        path: ROUTES.PLATFORM_DASHBOARD,
+        iconName: 'LayoutDashboard',
+      },
+      {
+        label: 'Firmalar / Tenantlar',
+        path: ROUTES.PLATFORM_TENANTS,
+        iconName: 'Building2',
+      },
+      {
+        label: 'Kullanıcılar',
+        path: ROUTES.PLATFORM_USERS,
+        iconName: 'Users',
+      },
+      {
+        label: 'Roller / Yetkiler',
+        path: ROUTES.PLATFORM_ROLES,
+        iconName: 'ShieldCheck',
+      },
+      {
+        label: 'Paket / Modül Yönetimi',
+        path: ROUTES.PLATFORM_PACKAGES,
+        iconName: 'Package',
+      },
+      {
+        label: 'Platform Ayarları',
+        path: ROUTES.PLATFORM_SETTINGS,
+        iconName: 'Settings',
+      },
+      {
+        label: 'Platform Log Kayıtları',
+        path: ROUTES.PLATFORM_LOGS,
+        iconName: 'Terminal',
       },
     ],
   },

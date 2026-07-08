@@ -17,7 +17,16 @@ import NavigationEntry from './app/web/navigation/page';
 import SEOEntry from './app/web/seo/page';
 import MediaEntry from './app/web/media/page';
 import FormsEntry from './app/web/forms/page';
+import WebLogsEntry from './app/web/logs/page';
 import DemoRecordsEntry from './app/demo-records/page';
+import PlatformEntry from './app/platform/page';
+import PlatformDashboardEntry from './app/platform/dashboard/page';
+import PlatformTenantsEntry from './app/platform/tenants/page';
+import PlatformUsersEntry from './app/platform/users/page';
+import PlatformRolesEntry from './app/platform/roles/page';
+import PlatformPackagesEntry from './app/platform/packages/page';
+import PlatformSettingsEntry from './app/platform/settings/page';
+import PlatformLogsEntry from './app/platform/logs/page';
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState<string>('/');
@@ -66,8 +75,26 @@ export default function App() {
         return <MediaEntry />;
       case '/web/forms':
         return <FormsEntry />;
+      case '/web/logs':
+        return <WebLogsEntry />;
       case '/demo-records':
         return <DemoRecordsEntry />;
+      case '/platform':
+        return <PlatformEntry />;
+      case '/platform/dashboard':
+        return <PlatformDashboardEntry />;
+      case '/platform/tenants':
+        return <PlatformTenantsEntry />;
+      case '/platform/users':
+        return <PlatformUsersEntry />;
+      case '/platform/roles':
+        return <PlatformRolesEntry />;
+      case '/platform/packages':
+        return <PlatformPackagesEntry />;
+      case '/platform/settings':
+        return <PlatformSettingsEntry />;
+      case '/platform/logs':
+        return <PlatformLogsEntry />;
       default:
         return <DashboardPageEntry />;
     }
